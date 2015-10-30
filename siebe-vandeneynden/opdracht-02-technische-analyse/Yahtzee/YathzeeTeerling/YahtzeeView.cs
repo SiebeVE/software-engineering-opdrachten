@@ -53,7 +53,10 @@ namespace YathzeeTeerling
       }
       gooiAlleTeerlingen.Location = new Point(20, teerlingen[0].Height); //Smijt alle teerlingen onder de teerling zetten
       startOpnieuw.Location = new Point((25 + gooiAlleTeerlingen.Width), teerlingen[0].Height);
-
+      huidig.Location = new Point(20, teerlingen[0].Height + gooiAlleTeerlingen.Height + 5);
+      highscore.Location = new Point(20, teerlingen[0].Height + gooiAlleTeerlingen.Height + huidig.Height + 5);
+      highscore.Text = "Highscore: 0";
+      huidig.Text = "Huidige worp: 0";
       startOpnieuw.Visible = !(_controller.getModel().AantalWorpen <= _controller.getModel().MaxAantalWorpen);
 
     }
@@ -69,6 +72,12 @@ namespace YathzeeTeerling
       {
         teerling.getController().resetTeerling();
       }
+    }
+
+    public void updateScores()
+    {
+      huidig.Text = "Huidige worp: " + _controller.getModel().Huidig;
+      highscore.Text = "Highscore: " + _controller.getModel().Highscore;
     }
   }
 }

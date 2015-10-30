@@ -12,6 +12,8 @@ namespace YathzeeTeerling
     private int aantalTeerlingen = 5;
     private int maxAantalWorpen = 3;
     private int aantalWorpen = 0;
+    private int highscore = 0;
+    private int huidig = 0;
 
     public void addTeerling(TeerlingController teerling)
     {
@@ -50,6 +52,28 @@ namespace YathzeeTeerling
       set
       {
         aantalWorpen = value;
+      }
+    }
+    public int Highscore
+    {
+      get
+      {
+        return highscore;
+      }
+      set
+      {
+        highscore = value;
+      }
+    }
+    public int Huidig
+    {
+      get
+      {
+        return huidig;
+      }
+      set
+      {
+        huidig = value;
       }
     }
   }

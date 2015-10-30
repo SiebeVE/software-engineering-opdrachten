@@ -10,7 +10,7 @@ namespace YathzeeTeerling
   {
     private YahtzeeView _view;
     private YahtzeeModel _model;
-    
+
     public YahtzeeController() //constructor
     {
       _view = new YahtzeeView(this);
@@ -72,6 +72,23 @@ namespace YathzeeTeerling
         teerling.werpTeerling();
         teerling.getView().updateViewTeerling();
       }
+      veranderScore();
+    }
+
+    public void veranderScore()
+    {
+      List<TeerlingController> teerlingen = _model.Teerlingen;
+      int alleOgen = 0;
+      foreach (TeerlingController teerling in teerlingen)
+      {
+        alleOgen += teerling._model.Aantalogen;
+      }
+      _model.Huidig = alleOgen;
+      if (alleOgen > _model.Highscore)
+      {
+        _model.Highscore = alleOgen;
+      }
+      _view.updateScores();
     }
   }
 }

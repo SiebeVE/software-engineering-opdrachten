@@ -10,7 +10,7 @@ namespace YathzeeTeerling
   {
     private int _aantalOgen; // aantal ogen per teerling
     private bool vast;
-    private bool toonWerp = true;
+    private bool toonWerp = false;
 
     public int Aantalogen //mogelijk maken dat andere aantal ogen teerling aanpassen
     {

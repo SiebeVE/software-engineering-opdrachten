@@ -13,8 +13,8 @@ namespace YathzeeTeerling
     private YahtzeeController _controllerYahtzee;
     public TeerlingModel _model;
 
-    static int seeder = 0; //nodig omdat anders random getal altijd hetzelfde is
-    Random random = new Random(++seeder); //random getal genereren
+    static int seeder = new Random().Next(); //nodig omdat anders random getal altijd hetzelfde is
+    Random random = new Random(seeder++); //random getal genereren
 
     public TeerlingController(YahtzeeController controller ) //constructor
     {

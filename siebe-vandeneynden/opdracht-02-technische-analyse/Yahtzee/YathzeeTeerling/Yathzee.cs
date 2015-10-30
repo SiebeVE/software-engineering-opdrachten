@@ -19,8 +19,6 @@ namespace YathzeeTeerling
 
     private void Yathzee_Load(object sender, EventArgs e)
     {
-      //toevoegen scorebord
-
       //toevoegen yathzee
       YahtzeeController yahtzee = new YahtzeeController();
       YahtzeeView yahtzeeView = yahtzee.getView();
